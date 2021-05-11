@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <title>Formulário de Pesquisa</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Diego - Formulário de Pesquisa</h1>
+            <p id="description">Preencha abaixo as informações solicitadas:</p>
+        </header>
+        <form id="survey-form" action="" method="POST">
+            <div class="grupo">
+                <label id="label-name" for="name">Nome</label>
+                <input class="input-value" type="text" name="name" id="name" placeholder="Insira seu nome" required>
+            </div>
+            <div class="grupo">
+                <label id="label-email" for="email">Email</label>
+                <input class="input-value" type="email" name="email" id="email" placeholder="Insira seu email" required>
+            </div>
+            <div class="grupo">
+                <label id="label-number" for="number">Idade (opcional)</label>
+                <input class="input-value" type="number" name="idade" id="number" placeholder="Idade" min="18" max="99">    
+            </div>
+            <div class="grupo">
+                <p>Qual opinião dessas descreve você melhor?</p>
+                <select name="role" id="dropdown">
+                    <option disabled selected value>Selecione uma das opções</option>
+                    <option value="estudante">Estudante</option>
+                    <option value="empregado em tempo integral">Empregado em tempo integral</option>
+                    <option value="estudante em tempo integral">Estudante em tempo integral</option>
+                    <option value="prefiro não dizer">Prefiro não dizer</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <p>Você está gostando desse formulário?</p>
+                <label class="label-radio">
+                    <input type="radio" name="user-opnion" value="muito-bom" checked style="background-position-y: bottom;">
+                    <span style="margin-left: 5px;">Muito Bom</span>
+                </label>
+                <label class="label-radio">    
+                    <input type="radio" name="user-opnion" value="mais-ou-menos">
+                    <span style="margin-left: 5px;">Mais ou Menos</span>
+                </label>
+                <label class="label-radio">  
+                    <input type="radio" name="user-opnion" value="ruim">    
+                    <span style="margin-left: 5px;">Ruim</span>
+                </label>
+            </div>
+            <div class="grupo">
+                <p>Qual área você deseja prosseguir na programação?</p>
+                <label for="frontend" class="label-check">
+                    <input type="checkbox" name="frondend" id="frontend" value="frontend">
+                    <span style="margin-left: 5px;">Frontend</span>
+                </label>
+                <label for="backend" class="label-check">
+                    <input type="checkbox" name="backend" id="frontend" value="backend">
+                    <span style="margin-left: 5px;">Backend</span>
+                </label>
+                <label for="games" class="label-check">
+                    <input type="checkbox" name="games" id="games" value="games">
+                    <span style="margin-left: 5px;">Games</span>
+                </label>
+                <label for="mobile" class="label-check">
+                    <input type="checkbox" name="mobile" id="mobile" value="mobile">
+                    <span style="margin-left: 5px;">Mobile</span>
+                </label>
+            </div>
+            <div class="grupo">
+                <p style="margin-top: 3%;">Sugestão ou comentários?</p>
+                <textarea name="sugestoes" id="comentarios" placeholder="Insira o comentário aqui"></textarea>
+            </div>
+            <div class="grupo">
+                <button class="submit-button" type="submit" id="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
